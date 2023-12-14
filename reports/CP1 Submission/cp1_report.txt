@@ -1,0 +1,11 @@
+Design:
+The pipeline design was divided evenly among three team members. Simon took on the task of designing the fetch and decode stage, Youyou was responsible for designing the execute and memory stage, and Yulun, also known as Ben, was in charge of designing the write-back stage. We convened as a group to collaboratively work on the control aspects of the pipeline.
+
+Implementation:
+Simon took charge of establishing the fundamental pipeline architecture and integrating the multiplexers within the datapath. Youyou focused on organizing the user-defined types and implementing the latching mechanism between different stages. Yulun was responsible for implementing the control words and managing the control assignment, along with overseeing the implementation of the rvfi monitors.
+
+Verification:
+To verify our design, we employed assembly codes and examined the signal waveforms in Verdi. Initially, we conducted tests on individual instructions to ensure the proper functionality of our datapath and control. Subsequently, we extended our testing to multiple instructions, effectively mitigating data hazards by inserting nop instructions between dependent instructions.
+
+Timing and energy analysis:
+the timing and energy analysis of your design: fmax = 1200 ps & total power = 3.07e+03 

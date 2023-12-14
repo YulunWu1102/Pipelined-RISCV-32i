@@ -1,0 +1,5 @@
+Functionalities:
+We plan to integrate the branch predictor, multiplier & devider, and SRAM cache as well as a victim cache to the original design. To meet the area constraint, we also plan to parameterized the cache to reduce the area of our memory system.
+
+Work Assignment:
+We will collaboratively integrate each individual module to one comprehensive design and debug the system as needed.

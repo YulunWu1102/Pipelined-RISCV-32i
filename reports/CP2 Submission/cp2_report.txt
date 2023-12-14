@@ -1,0 +1,11 @@
+Design:
+The implementation of hazard detection, integration with L1 Cache, an arbiter and a static not-taken branch predictor was divided evenly among three team members. Simon took on the task of designing and implementing the hazard detection unit and forwarding, Youyou was responsible for designing and implementing the arbiter, and Yulun, also known as Ben, was in charge of integrating the updated L1 Cache. We convened as a group to collaboratively work on debugging and integration of all components together.
+
+Functionalities:
+We implemented a hazard detection unit which can effectively detect hazards caused by data depenedencies between the mem-exe stage and wb-exe stage. The stall functionality was also achieved so that the pipeline would be stopped when data is dependent on the mem stage until the mem_resp signal is set. An arbiter is implemented to decide which cache get to communicate with the main memory. Our cache is redesigned so that it could serve the cpu at the same cycle of request when hit. 
+
+Verification:
+To verify our design, we employed assembly codes and examined the signal waveforms in Verdi. Initially, we conducted dut unit test on the redesigned cache to make sure it works perfectly. 
+
+Timing and energy analysis:
+the timing and energy analysis of your design: fmax = 2000 ps & total power = 7.36e+03 

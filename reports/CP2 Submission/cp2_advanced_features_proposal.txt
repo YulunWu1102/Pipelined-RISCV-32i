@@ -1,0 +1,8 @@
+1. Paramtrized Cache                    6
+2. Victim Cache                         4
+3. Local branch history table           2
+4. Global 2-level branch history table  3    
+5. Basic Prefetcher                     4
+6. Advanced Multiplier                  5
+
+Total: 6 + 4 + 3 + 2 * 0.8 + 4 + 5 = 23.6

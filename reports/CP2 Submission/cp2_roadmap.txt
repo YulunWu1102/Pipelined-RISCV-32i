@@ -1,0 +1,5 @@
+Functionalities:
+We integrated L1 caches for the D-cache and the I-cache, datapath and control of the arbiter, hazard detection unit and data forwarding path, as well as a static branch predictor. In addition, we also implemented the logic that handles memeory access delay and stalls of the pipeline.
+
+Work Assignment:
+Simon took charge of implementing the data hazard detection and forwarding unit. Youyou focused on migrating and modifying the cache from MP3 and integrated it into the pipeline. Yulun was responsible for designing and implementing the datapath and control of arbiter, as well as the integration. Once all individual components are implemented and verified, we are going to integrate them together and verify them as a DUT.
