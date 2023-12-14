@@ -1,0 +1,87 @@
+Magic 271485
+Revision Verdi_R-2020.12-SP1-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 2560 530 190 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ziningg2/fa23_ece411_AG05/mp4/sim/dump.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 1060500.000000
+cursor 410000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 8
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/ziningg2/fa23_ece411_AG05/mp4/sim/dump.fsdb"
+addSignal -h 15 /top_tb/dut/clk
+addSignal -h 15 -holdScope order[63:0]
+addSignal -h 15 -UNSIGNED /top_tb/dut/datapath/ifid_opcode_out[6:0]
+addSignal -h 15 -holdScope pc_out[31:0]
+addSignal -h 15 -holdScope pcmux_out[31:0]
+addSignal -h 15 -holdScope all_ready
+addSignal -h 15 -holdScope load_ifid
+addSignal -h 15 -holdScope ifid_stall
+addSignal -h 15 -holdScope control
+addSignal -h 15 -holdScope idex_control_out
+addSignal -h 15 -holdScope exmem_control_out
+addSignal -h 15 -holdScope memwb_control_out
+addSignal -h 15 -holdScope ifid_pc_out[31:0]
+addSignal -h 15 -holdScope idex_alumux1_out[31:0]
+addSignal -h 15 -holdScope idex_alumux2_out[31:0]
+addSignal -h 15 -holdScope alu_out[31:0]
+addSignal -h 15 -holdScope exmem_aluout[31:0]
+addSignal -h 15 -holdScope ifid_flush
+addSignal -h 15 -holdScope idex_flush
+addSignal -h 15 -holdScope exmem_flush
+addSignal -h 15 -holdScope idex_cmp1_out[31:0]
+addSignal -h 15 -holdScope idex_cmp2_out[31:0]
+addSignal -h 15 -holdScope br_en
+addSignal -h 15 -holdScope load_pc
+addSignal -h 15 /top_tb/dut/datapath/regfile/data[0:31]
+addSignal -h 15 /top_tb/dut/datapath/dmem_resp
+addSignal -h 15 -holdScope dmem_rdata[31:0]
+addSignal -h 15 -holdScope updated_rs1_out[31:0]
+addSignal -h 15 -holdScope regfilemux_out[31:0]
+addSignal -h 15 -UNSIGNED -holdScope forwardmux1_sel[2:0]
+addSignal -h 15 -UNSIGNED /top_tb/dut/arbiter/state[1:0]
+addSignal -h 15 -holdScope d_cache_resp
+addSignal -h 15 -holdScope ca_rdata[255:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

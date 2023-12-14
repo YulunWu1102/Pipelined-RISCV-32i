@@ -1,0 +1,154 @@
+Magic 271485
+Revision Verdi_R-2020.12-SP1-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 2560 539 313 295
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/yulun4/ECE411_MP4/fa23_ece411_AG05/mp4/sim/dump.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 105174015.371806 105622972.977358
+cursor 105220000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 24
+; marker line index
+markerPos 42
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/yulun4/ECE411_MP4/fa23_ece411_AG05/mp4/sim/dump.fsdb"
+addSignal -h 15 /top_tb/dut/clk
+addSignal -h 15 -UNSIGNED /top_tb/dut/control_op/opcode[6:0]
+addSignal -h 15 /top_tb/dut/datapath/dmem_resp
+addSignal -h 15 -holdScope dmem_rdata[31:0]
+addSignal -h 15 -holdScope dmem_address[31:0]
+addSignal -h 15 /top_tb/dut/dcache/data_out[255:0]
+addSignal -h 15 /top_tb/dut/datapath/load_pc
+addSignal -h 15 -holdScope load_ifid
+addSignal -h 15 -holdScope pc_brjl_load
+addSignal -h 15 /top_tb/dut/datapath/memwb_latch/MEMWB_CONTROL_REG/struct_out
+addSignal -h 15 /top_tb/dut/rst
+addGroup "D Cache"
+addSignal -h 15 -UNSIGNED /top_tb/dut/dcache/control/state[31:0]
+addSignal -h 15 /top_tb/dut/dcache/mem_address[31:0]
+addSignal -h 15 -holdScope mem_resp
+addSignal -h 15 -holdScope mem_read
+addSignal -h 15 -holdScope mem_write
+addSignal -h 15 /top_tb/dut/dcache/control/index[3:0]
+addSignal -h 15 /top_tb/dut/dcache/main_cache_datapath/tag_out_sram[0:3]
+addSignal -h 15 -holdScope data_out_sram[0:3]
+addSignal -h 15 /top_tb/dut/dcache/victim_cache_datapath/victim_data_i[255:0]
+addSignal -h 15 -holdScope victim_tag_i[22:0]
+addSignal -h 15 /top_tb/dut/dcache/mem_wdata[255:0]
+addSignal -h 15 -holdScope data_out[255:0]
+addSignal -h 15 /top_tb/dut/dcache/victim_cache_datapath/victim_tag_o[22:0]
+addSignal -h 15 /top_tb/dut/dcache/victim_cache_datapath/victim_tag_array/mem[0:15]
+addSignal -h 15 /top_tb/dut/dcache/victim_cache_datapath/victim_data_o[255:0]
+addSignal -h 15 /top_tb/dut/dcache/mem_rdata[255:0]
+addSignal -h 15 -holdScope pmem_resp
+addSignal -h 15 -holdScope pmem_rdata[255:0]
+addSignal -h 15 -holdScope pmem_address[31:0]
+addSignal -h 15 -holdScope pmem_write
+addSignal -h 15 /top_tb/dut/dcache/control/next_plru_hit_test[2:0]
+addSignal -h 15 -holdScope next_plru_hit[2:0]
+addSignal -h 15 -holdScope plru_o[2:0]
+addSignal -expanded -h 15 -holdScope way_next_para[1:0]
+addSignal -expanded -h 15 -holdScope way_next[1:0]
+addSignal -h 15 -holdScope way_next_para[1]
+addSignal -h 15 -holdScope way_next_para[0]
+addSignal -h 15 -holdScope way_next[1]
+addSignal -h 15 -holdScope way_next[0]
+addSignal -h 15 -holdScope whm_shifter[1:0]
+addGroup "I Cache" -e FALSE
+addSignal -h 15 /top_tb/dut/icache/main_cache_datapath/index[3:0]
+addSignal -h 15 /top_tb/dut/icache/control/mem_address[31:0]
+addSignal -h 15 -holdScope mem_address_1[31:0]
+addSignal -h 15 /top_tb/dut/icache/mem_resp
+addSignal -h 15 /top_tb/dut/datapath/load_pc
+addSignal -h 15 -holdScope dmem_resp
+addSignal -h 15 -UNSIGNED /top_tb/dut/icache/control/state[31:0]
+addSignal -h 15 -UNSIGNED -holdScope next_states[31:0]
+addSignal -h 15 /top_tb/dut/icache/main_cache_datapath/hit
+addSignal -h 15 /top_tb/dut/icache/control/dont_go_to_comparetag
+addSignal -h 15 /top_tb/dut/icache/main_cache_datapath/plru_we
+addSignal -h 15 /top_tb/dut/icache/main_cache_datapath/plru_array/internal_array[0:15]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/dut/icache/main_cache_datapath/plru_i[2:0]
+addSignal -h 15 /top_tb/dut/icache/control/way_index[1:0]
+addSignal -h 15 /top_tb/dut/icache/main_cache_datapath/plru_o[2:0]
+addSignal -h 15 /top_tb/dut/icache/control/next_plru_hit[2:0]
+addSignal -h 15 /top_tb/dut/icache/main_cache_datapath/evict_index[1:0]
+addSignal -h 15 -holdScope tag_out_sram[0:3]
+addSignal -h 15 -holdScope tag_in[22:0]
+addSignal -expanded -h 15 -holdScope data_out_sram[0:3]
+addSignal -h 15 /top_tb/dut/icache/victim_cache_datapath/victim_tag_o[22:0]
+addSignal -h 15 -holdScope victim_data_o[255:0]
+addGroup "arbiter" -e FALSE
+addSignal -h 15 -UNSIGNED /top_tb/dut/arbiter/state[1:0]
+addSignal -h 15 -holdScope ca_resp
+addGroup "G3"
+addSignal -h 15 /top_tb/dut/monitor_valid
+addSignal -h 15 -holdScope monitor_order[63:0]
+addSignal -h 15 -holdScope monitor_inst[31:0]
+addSignal -h 15 -holdScope monitor_rs1_addr[4:0]
+addSignal -h 15 -holdScope monitor_rs1_addr[4:0]
+addSignal -h 15 -holdScope monitor_rs2_addr[4:0]
+addSignal -h 15 -holdScope monitor_rs1_rdata[31:0]
+addSignal -h 15 -holdScope monitor_rs2_rdata[31:0]
+addSignal -h 15 -holdScope monitor_rd_addr[4:0]
+addSignal -h 15 -holdScope monitor_rd_wdata[31:0]
+addSignal -h 15 /top_tb/dut/datapath/exmem_aluout[31:0]
+addSignal -h 15 -holdScope regfilemux_out[31:0]
+addSignal -h 15 /top_tb/dut/monitor_pc_rdata[31:0]
+addSignal -h 15 -holdScope monitor_pc_wdata[31:0]
+addSignal -h 15 -holdScope monitor_mem_addr[31:0]
+addSignal -h 15 -holdScope monitor_mem_rmask[3:0]
+addSignal -h 15 -holdScope monitor_mem_wmask[3:0]
+addSignal -h 15 -holdScope monitor_mem_rdata[31:0]
+addSignal -h 15 -holdScope monitor_mem_wdata[31:0]
+addGroup "G4"
+addSignal -expanded -h 15 /top_tb/dut/wb_inst[31:0]
+addSignal -h 15 -holdScope id_inst[31:0]
+addSignal -h 15 -holdScope ex_inst[31:0]
+addSignal -h 15 -holdScope mem_inst[31:0]
+addGroup "G5"
+addSignal -h 15 /top_tb/dut/bmem_write
+addSignal -h 15 -holdScope bmem_read
+addSignal -h 15 /top_tb/dut/cacheline_adaptor/write_i
+addSignal -h 15 /top_tb/dut/arbiter/d_cache_write
+addSignal -h 15 -UNSIGNED /top_tb/dut/dcache/control/state[31:0]
+addSignal -h 15 /top_tb/dut/bmem_resp
+addGroup "G8"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

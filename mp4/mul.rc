@@ -1,0 +1,72 @@
+Magic 271485
+Revision Verdi_R-2020.12-SP1-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1512 383 225 114
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/youyouy2/Desktop/fa23_ece411_AG05/mp4/sim/dump.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 419333.190602 568197.190602
+cursor 486000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 11
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/youyouy2/Desktop/fa23_ece411_AG05/mp4/sim/dump.fsdb"
+addSignal -h 15 /top_tb/dut/clk
+addSignal -h 15 -UNSIGNED /top_tb/dut/control_op/opcode[6:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/dut/datapath/regfile/data[0:31]
+addSignal -h 15 /top_tb/dut/datapath/alu_out[31:0]
+addGroup "G2"
+addSignal -h 15 /top_tb/dut/datapath/idex_control_out.mul_en
+addSignal -h 15 -holdScope mul_resp
+addSignal -h 15 -holdScope alumux1_out[31:0]
+addSignal -h 15 -holdScope control
+addSignal -h 15 -UNSIGNED -BIN -holdScope ready_mask[4:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/dut/datapath/multuplier/result[63:0]
+addSignal -h 15 -UNSIGNED -HEX /top_tb/dut/datapath/idex_alumux1_out[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope idex_alumux2_out[31:0]
+addSignal -h 15 -holdScope mul_out[31:0]
+addSignal -h 15 -UNSIGNED /top_tb/dut/datapath/multuplier/state[31:0]
+addSignal -h 15 -holdScope mul_out[31:0]
+addSignal -h 15 /top_tb/dut/datapath/load_idex
+addSignal -h 15 /top_tb/dut/dmem_rdata[31:0]
+addGroup "G3"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+
